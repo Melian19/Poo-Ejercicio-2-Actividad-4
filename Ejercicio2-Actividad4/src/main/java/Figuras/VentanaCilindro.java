@@ -5,17 +5,22 @@ import java.awt.*;
 import java.awt.event.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+/**
+ *
+ * @author Laura
+ */
 public class VentanaCilindro extends javax.swing.JFrame {
-    
+    /**
+     * Creates new form VentanaPiramide
+     */
     private Container contenedor;
     
     public VentanaCilindro() {
         initComponents();
-        setTitle("Cilindro");
-        setSize(280,210);
-        setLocationRelativeTo(null);
-        setResizable(false);
+        setTitle("Cilindro");//Establece el titulo de la ventana
+        setSize(280,210);//Establece el tamaño de la ventana
+        setLocationRelativeTo(null);//Establece la posicion de la ventana en el centro de la pantalla
+        setResizable(false);//Establece que el tamaño de la ventana no se puede cambiar
     }
 
     /**
@@ -122,11 +127,11 @@ public class VentanaCilindro extends javax.swing.JFrame {
         double radio, altura = 0;
         
         try{
-            radio = Double.parseDouble(campoRadio.getText());
-            altura = Double.parseDouble(campoAltura.getText());
-            Cilindro cilindro = new Cilindro(radio, altura);
-            volumen.setText("Volumen (cm³): "+(String.format("%.2f",cilindro.calcularVolumen())));
-            superficie.setText("Superficie (cm²): "+(String.format("%.2f",cilindro.calcularSuperficie())));
+            radio = Double.parseDouble(campoRadio.getText());//Se obtiene y convierte el valor numérico del radio
+            altura = Double.parseDouble(campoAltura.getText());//Se obtiene y convierte el valor numérico de la altura
+            Cilindro cilindro = new Cilindro(radio, altura);//Se define y crea objeto cilindro
+            volumen.setText("Volumen (cm³): "+(String.format("%.2f",cilindro.calcularVolumen())));//Se obtiene y muetra el volumen del cilindro
+            superficie.setText("Superficie (cm²): "+(String.format("%.2f",cilindro.calcularSuperficie())));//Se obtiene y muetra la superficie del cilindro
         }catch(Exception e){
             error = true;
         } finally {

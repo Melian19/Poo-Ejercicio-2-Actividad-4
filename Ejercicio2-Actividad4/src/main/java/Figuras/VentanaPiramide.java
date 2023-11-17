@@ -5,6 +5,11 @@ import java.awt.event.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ *
+ * @author Laura
+ */
+
 public class VentanaPiramide extends javax.swing.JFrame implements ActionListener {
 
     /**
@@ -12,10 +17,10 @@ public class VentanaPiramide extends javax.swing.JFrame implements ActionListene
      */
     public VentanaPiramide() {
         initComponents();
-        setTitle("Piramide");
-        setSize(280,240);
-        setLocationRelativeTo(null);
-        setResizable(false);
+        setTitle("Piramide"); //Establece el titulo de la ventana
+        setSize(280,240); //Establece el tamaño de la ventana
+        setLocationRelativeTo(null);//Establece la posicion de la ventana en el centro de la pantalla
+        setResizable(false); //Establece que el tamaño de la ventana no se puede cambiar
     }
 
     /**
@@ -127,17 +132,17 @@ public class VentanaPiramide extends javax.swing.JFrame implements ActionListene
     }// </editor-fold>//GEN-END:initComponents
 
     private void calcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calcularActionPerformed
-        Piramide piramide;
+        Piramide piramide; //Se define objeto piramide
         boolean error = false;
         double base, altura, apotema = 0;
         
         try{
-            base = Double.parseDouble(campoBase.getText());
-            altura = Double.parseDouble(campoAltura.getText());
-            apotema = Double.parseDouble(campoApotema.getText());
-            piramide = new Piramide(base,altura,apotema);
-            volumen.setText("Volumen (cm³): "+ String.format("%.2f",piramide.calcularVolumen()));
-            superficie.setText("SUperficie (cm²): "+ String.format("%.2f", piramide.calcularSuperficie()));
+            base = Double.parseDouble(campoBase.getText()); // Se obtiene y convierte el valor numérico de la base
+            altura = Double.parseDouble(campoAltura.getText()); // Se obtiene y convierte el valor numérico de la altura
+            apotema = Double.parseDouble(campoApotema.getText()); // Se obtiene y convierte el valor numérico de la apotema
+            piramide = new Piramide(base,altura,apotema); //Se crea objeto piramide
+            volumen.setText("Volumen (cm³): "+ String.format("%.2f",piramide.calcularVolumen()));//Se obtiene y muetra el volumen de la piramide 
+            superficie.setText("SUperficie (cm²): "+ String.format("%.2f", piramide.calcularSuperficie()));//Se obtiene y muetra la superficie de la piramide 
         }catch (Exception e) {
             error = true;
         } finally {

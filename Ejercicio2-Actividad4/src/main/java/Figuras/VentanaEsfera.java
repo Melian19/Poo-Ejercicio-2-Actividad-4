@@ -5,17 +5,22 @@ import java.awt.*;
 import java.awt.event.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+/**
+ *
+ * @author Laura
+ */
 public class VentanaEsfera extends javax.swing.JFrame  implements ActionListener{
-    
+    /**
+     * Creates new form VentanaEsfera
+     */
     private Container contenedor;
     
     public VentanaEsfera() {
         initComponents();
-        setTitle("Esfera");
-        setSize(280,200);
-        setLocationRelativeTo(null);
-        setResizable(false);
+        setTitle("Esfera"); //Establece el titulo de la ventana
+        setSize(280,200);//Establece el tamaño de la ventana
+        setLocationRelativeTo(null);//Establece la posicion de la ventana en el centro de la pantalla
+        setResizable(false);//Establece que el tamaño de la ventana no se puede cambiar
     }
 
     /**
@@ -98,10 +103,10 @@ public class VentanaEsfera extends javax.swing.JFrame  implements ActionListener
         double radio = 0;
         
         try{
-            radio = Double.parseDouble(campoRadio.getText());
-            Esfera esfera = new Esfera(radio);
-            volumen.setText("Volumen (cm³): "+(String.format("%.2f",esfera.calcularVolumen())));
-            superficie.setText("Superficie (cm²): "+(String.format("%.2f",esfera.calcularSuperficie())));
+            radio = Double.parseDouble(campoRadio.getText());//Se obtiene y convierte el valor numérico del radio
+            Esfera esfera = new Esfera(radio); //Se define y crea objeto esfera
+            volumen.setText("Volumen (cm³): "+(String.format("%.2f",esfera.calcularVolumen())));//Se obtiene y muetra el volumen de la esfera
+            superficie.setText("Superficie (cm²): "+(String.format("%.2f",esfera.calcularSuperficie())));//Se obtiene y muetra la superficie de la esfera
         }catch(Exception e){
             error = true;
         } finally {

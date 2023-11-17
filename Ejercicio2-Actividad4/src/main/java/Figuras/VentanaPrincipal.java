@@ -5,6 +5,11 @@ import java.awt.event.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ *
+ * @author Laura
+ */
+
 public class VentanaPrincipal extends javax.swing.JFrame implements ActionListener {
 
     /**
@@ -12,11 +17,12 @@ public class VentanaPrincipal extends javax.swing.JFrame implements ActionListen
      */
     public VentanaPrincipal() {
         initComponents();
-        setTitle("Figuras");
-        setSize(350,160);
-        setResizable(false);
-        setLocationRelativeTo(null);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setTitle("Figuras"); //Establece el titulo de la ventana
+        setSize(350,160); //Establece el tamaño de la ventana
+        setResizable(false); //Establece que el tamaño de la ventana no se puede cambiar
+        setLocationRelativeTo(null);//Establece la posicion de la ventana en el centro de la pantalla
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);/*Establece que el boton 
+        cerrar permitite sale de la aplicacion */
     }
 
     /**
@@ -86,18 +92,18 @@ public class VentanaPrincipal extends javax.swing.JFrame implements ActionListen
     }// </editor-fold>//GEN-END:initComponents
 
     private void cilindroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cilindroActionPerformed
-        VentanaCilindro cilindro = new VentanaCilindro();
-        cilindro.setVisible(true);
+        VentanaCilindro cilindro = new VentanaCilindro(); //Definfe la ventana cilindro
+        cilindro.setVisible(true); //Establece la ventana como visible
     }//GEN-LAST:event_cilindroActionPerformed
 
     private void esferaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_esferaActionPerformed
-        VentanaEsfera esfera = new VentanaEsfera();
-        esfera.setVisible(true);
+        VentanaEsfera esfera = new VentanaEsfera(); //Define la ventana esfera
+        esfera.setVisible(true); //Establece la ventana como visible
     }//GEN-LAST:event_esferaActionPerformed
 
     private void piramideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_piramideActionPerformed
-        VentanaPiramide piramide = new VentanaPiramide();
-        piramide.setVisible(true);
+        VentanaPiramide piramide = new VentanaPiramide(); //Define la ventana piramide
+        piramide.setVisible(true); //Establece la ventana como visible
     }//GEN-LAST:event_piramideActionPerformed
 
     /**
